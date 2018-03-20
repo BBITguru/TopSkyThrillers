@@ -7,7 +7,7 @@
 * 04.0 - Preloader
 * 05.0 - Header
 * 06.0 - Banner
-* 07.0 -  Login
+* 07.0 - Login
 * 08.0 - Features
 * 09.0 - Team Member
 * 10.0 - Footer
@@ -136,18 +136,6 @@ a:hover {
     right: 0;
     border-bottom: 1px solid #000;
     border-right: 1px solid #000;
-}
-
-.polo-btn {
-    display: block;
-    color: #fff;
-    border: 1px solid;
-    text-align: center;
-    font-size: 26px;
-    font-weight: 100;
-    padding: 15px 0px;
-    margin: 0px 0px 20px 0px;
-    transition: 0.4s ease all;
 }
 
 
@@ -326,8 +314,8 @@ a:hover {
 /////////////////////////////////////////////////////////////////////*/
 
 #banner {
-    /* background-color: black; */
-    background: url(../img/bg.jpg);
+    background-color: black;
+    /* background: url(../img/bg.jpg); */
     background-size: cover;
     padding-top: 80px;
     background-attachment: fixed;
@@ -351,23 +339,10 @@ a:hover {
     padding-bottom: 20px;
 }
 
-.hand-container {
-    max-height: 630px;
-    overflow: hidden;
-}
-
-.iphone-hand {
-    padding: 20px 30px 0px 30px;
-}
-
 .store:hover {
     background: #00ceb8;
     border-color: #00ceb8;
     color: #fff;
-}
-
-.polo-btn i {
-    padding-right: 6px;
 }
 
 .slidedown {
@@ -537,78 +512,17 @@ section.container {
 
 /*1340px - 1170px*/
 
-@media all and (max-width: 1340px) and (min-width: 1170px;
-) {
-    .address-list li {
-        font-size: 18px;
-    }
-    .address-list li i {
-        width: 60px;
-        height: 60px;
-        font-size: 34px;
-    }
-}
+@media all and (max-width: 1340px) and (min-width: 1170px) {}
 
 
 /*1170px - 992px*/
 
-@media all and (max-width: 1170px) and (min-width: 992px) {
-    .address {
-        width: 100%;
-    }
-    .mailbox {
-        width: 100%;
-    }
-    .address-list {
-        padding: 200px 0px 70px 0px;
-        width: 100%;
-        max-width: 100%;
-    }
-    .address {
-        height: 340px;
-    }
-    .mailbox .container {
-        margin-top: 100px;
-        height: auto;
-    }
-    .address-list {
-        padding: 200px 0px 70px 0px;
-        width: 100%;
-        max-width: 100%;
-    }
-    .address-list li {
-        font-size: 16px;
-        padding: 1em;
-        display: inline-block;
-    }
-    .address-list li i {
-        display: table-cell;
-        line-height: 42px;
-        width: 42px;
-        height: 40px;
-        font-size: 18px;
-    }
-}
+@media all and (max-width: 1170px) and (min-width: 992px) {}
 
 
 /*1170px*/
 
-@media all and (max-width: 1170px) {
-    .address {
-        width: 100%;
-    }
-    .mailbox {
-        width: 100%;
-    }
-    .mailbox {
-        padding-bottom: 111px;
-        height: auto;
-    }
-    .mailbox .container {
-        margin-top: 130px;
-        margin-bottom: 0px;
-    }
-}
+@media all and (max-width: 1170px) {}
 
 
 /*992px*/
