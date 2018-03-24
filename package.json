@@ -1,0 +1,25 @@
+{
+  "name": "topskythrillers-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "login.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BBITguru/TopSkyThrillers-Repo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BBITguru/TopSkyThrillers-Repo/issues"
+  },
+  "homepage": "https://github.com/BBITguru/TopSkyThrillers-Repo#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  }
+}

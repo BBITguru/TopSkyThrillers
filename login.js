@@ -1,4 +1,4 @@
-//User name authentication with firebase. 
+//User name authentication with firebase. Can we use login feature with Firebase or do we use class examples
 //Identity - who is our player
 //LOGIN
 
