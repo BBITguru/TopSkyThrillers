@@ -1,3 +1,25 @@
+// // *********************************************************************************
+// // CONNECTION.JS - THIS FILE INITIATES THE CONNECTION TO MYSQL
+// // *********************************************************************************
+
+// // Dependencies
+// var Sequelize = require("sequelize");
+
+// // Creates mySQL connection using Sequelize
+// var sequelize = new Sequelize("starwars", "root", "password", {
+//   host: "localhost",
+//   dialect: "mysql",
+//   pool: {
+//     max: 5,
+//     min: 0,
+//     idle: 10000
+//   }
+// });
+
+// // Exports the connection for other files to use
+// module.exports = sequelize;
+
+
 // Dependencies
 var express = require("express");
 var bodyParser = require("body-parser");
@@ -47,14 +69,6 @@ require("./app/routes/api-routes.js")(app);
 // Here we introduce HTML routing to serve different HTML files
 require("./app/routes/html-routes.js")(app);
 
-
-// Set Handlebars.
-var exphbs = require("express-handlebars");
-
-app.engine("handlebars", exphbs({
-  defaultLayout: "main"
-}));
-app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
 var routes = require("./controllers/catsController.js");
