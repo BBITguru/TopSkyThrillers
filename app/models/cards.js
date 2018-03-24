@@ -23,7 +23,7 @@ var Character = sequelize.define("character", {
 });
 
 // Syncs with DB
-Character.sync();
+Cards.sync();
 
 // Makes the Character Model available for other files (will also create a table)
-module.exports = Character;
+module.exports = WhiteCards;
