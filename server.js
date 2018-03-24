@@ -1,3 +1,6 @@
+// Dependencies
+var express = require("express");
+var bodyParser = require("body-parser");
 var firebase = require("firebase");
 
 import * as firebase from "firebase";
