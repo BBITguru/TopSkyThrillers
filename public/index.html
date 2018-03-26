@@ -16,10 +16,10 @@
 
     <!-- css -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/ionicons.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.css">
     <link rel="stylesheet" href="assets/css/owl.theme.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/animate.css"> -->
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- fonts -->
@@ -27,8 +27,13 @@
 
 
 </head>
+<style>
+    div.modal-content {
+        background-color: #00967f;
+    }
+</style>
 
-<body id="home">
+<body>
 
 
     <!-- ****************************** Banner ************************** -->
@@ -46,6 +51,12 @@
 
                             <br>The game is simple. Each round, one player asks a question from a black card, and everyone else answers with their funniest white card. Trigger the modal with a button
 
+
+                            <br>
+                            <br>
+
+
+
                             <br>
 
                             <!-- Trigger the modal with a button -->
@@ -62,12 +73,15 @@
                                             <hr>
                                             <form role="form">
                                                 <div class="form-group">
-                                                    <h4>LOGIN</h4>
+
+
                                                     <input id="txtEmail" type="email" placeholder="Email">
                                                     <input id="txtPassword" type="password" placeholder="Password">
-                                                    <button id="btnLogin" class="btn btn-action">Login</button>
-                                                    <button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
                                                 </div>
+                                                <button id="btnLogin" class="btn btn-action">Login</button>
+                                                <button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
+
+                                                  
                                             </form>
                                         </div>
                                     </div>
@@ -89,25 +103,18 @@
 
 
 
+
+
+
 </body>
 
+
 </html>
-
-
-
-
-
-
-
-
-
 
 <!-- ****************************** Footer ************************** -->
 
 <section id="footer">
     <section class="container">
-
-        <!---copywright and link-->
         <div class="footer-copyright py-3 text-center">
             @ 2018 Copyright:
             <a href="about.html">TopSKyThrillers.com</a>
@@ -118,7 +125,10 @@
 
 
 <!-- All the scripts -->
-<script src="../Firebase/app.js"></script>
+<script src="app.js"></script>
+
+
+
 <script src="assets/js/jquery-2.1.3.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/wow.min.js"></script>
