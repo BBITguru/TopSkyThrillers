@@ -11,13 +11,15 @@ console.log("My Service is listening on port 3000.");
 
 var firebase = require("firebase");
 
-var config = {
-    apiKey: "AIzaSyBSRIbPDJ5GWD4rDUclfdHHpEWm9eA5d4o",
-    authDomain: "topskythrillers.firebaseapp.com",
-    databaseURL: "https://topskythrillers.firebaseio.com",
-    projectId: "topskythrillers",
-    storageBucket: "topskythrillers.appspot.com",
-    messagingSenderId: "228375406134"
+
+// Initialize Firebase
+const config = {
+  apiKey: "AIzaSyBSRIbPDJ5GWD4rDUclfdHHpEWm9eA5d4o",
+  authDomain: "topskythrillers.firebaseapp.com",
+  databaseURL: "https://topskythrillers.firebaseio.com",
+  projectId: "topskythrillers",
+  storageBucket: "topskythrillers.appspot.com",
+  messagingSenderId: "228375406134"
 };
 firebase.initializeApp(config);
 
@@ -54,17 +56,18 @@ app.get('/players/getMany', function(req, res) {
         })
 });
 
-// // GET a all promptCards BUT in multiple objects
-// app.get('/promptCard/getOne',function (req, res){
-//   firebase.database().ref('promptCard').once('value')
-//   .then(function (data) {
-//     res.send(data.val());
-//   })
-// });
+// GET a all promptCards BUT in multiple objects
+app.get('/promptCard/getOne', function (req, res) {
+  firebase.database().ref('promptCard').once('value')
+    .then(function (data) {
+      res.send(data.val());
+    })
+});
 
 app.get('/promptCard/getOne', function(req, res) {
     firebase.database().ref("promptCard/3");
 });
+
 
 // // GET a single promptCard
 // app.get('/promptCard',function (req, res){
@@ -101,6 +104,7 @@ app.put('/players/edit', function(req, res) {
 });
 
 // DELETE player data
+
 app.delete('/players/delete', function(req, res) {
     var playerId = req.body.playerId;
     firebase.database().ref('players/' + playerId)
@@ -114,3 +118,64 @@ app.delete('/players/delete', function(req, res) {
             res.send(message);
         });
 });
+
+
+// Firebase User Authorization
+(function () {
+    const config = {
+      apiKey: "AIzaSyBSRIbPDJ5GWD4rDUclfdHHpEWm9eA5d4o",
+      authDomain: "topskythrillers.firebaseapp.com",
+      databaseURL: "https://topskythrillers.firebaseio.com",
+      projectId: "topskythrillers",
+      storageBucket: "topskythrillers.appspot.com",
+      messagingSenderId: "228375406134"
+    };
+    firebase.initializeApp(config);
+
+    // Get elements for player ID sing up & login
+    const txtEmail = document.getElementById('txtEmail');
+    const txtPassword = document.getElementById('txtPassword');
+    const btnLogin = document.getElementById('btnLogin');
+    const btnSignUp = document.getElementById('btnSignUp');
+    const btnLogout = document.getElementById('btnLogout');
+
+    // Add login event
+    btnLogin.addEventListener('click', e => {
+      // Get email and password
+      const email = txtEmail.value;
+      const pass = txtPassword.value;
+      const auth = firebase.auth();
+      // Sign in
+      const promise = auth.signInWithEmailAndPassword(email, pass);
+      promise.catch(e => console.log(e.message));
+    });
+
+    // Add signup event
+    btnSignUp.addEventListener('click', e => {
+      // Get email and pass
+      // TODO: Check 4 REAL EMAIL
+      const email = txtEmail.value;
+      const pass = txtPassword.value;
+      const auth = firebase.auth();
+      // Sign in
+      const promise = auth.createUserWithEmailAndPassword(email, pass);
+      promise
+        // .then(user => console.log())
+        .catch(e => console.log(e.message));
+    });
+
+    // Logout Button
+    btnLogout.addEventListener('click', e => {
+      firebase.auth().signOut();
+    });
+
+    // Add a realtime listener
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+      if (firebaseUser) {
+        console.log(firebaseUser);
+        btnLogout.classList.remove('hide');
+      } else {
+        console.log('not logged in');
+      }
+    });
+  });
