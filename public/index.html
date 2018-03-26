@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Cards Against Humanity</title>
+    <title> INDEX Cards Against Humanity</title>
 
     <!-- meta -->
     <meta charset="utf-8">
@@ -16,10 +16,10 @@
 
     <!-- css -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/ionicons.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.css">
     <link rel="stylesheet" href="assets/css/owl.theme.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/animate.css"> -->
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- fonts -->
@@ -27,37 +27,14 @@
 
 
 </head>
+<style>
+    div.modal-content {
+        background-color: #00967f;
+    }
+</style>
 
-<body id="home">
+<body>
 
-    <!-- ****************************** Preloader ************************** -->
-
-    <!-- <div id="preloader"></div> -->
-
-    <!-- ****************************** Sidebar ************************** -->
-
-    <!-- <nav id="sidebar-wrapper">
-        <a id="menu-close" href="#" class="close-btn toggle"><i class="ion-ios-close-empty"></i></a>
-        <ul class="sidebar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="createusermodal.html">Create Account</a></li>
-            <li><a href="loginmodal.html">Login</a></li>
-            <li><a href="about.html">About Us</a></li>
-        </ul>
-    </nav> -->
-
-    <!-- ****************************** Header ************************** -->
-
-    <!-- <header class="sticky" id="header">
-        <section class="container">
-            <section class="row" id="logo_menu">
-                <section class="col-xs-8">
-                    <a class="logo" href=""></a>
-                </section>
-                <section class="col-xs-4"><a id="menu-toggle" href="#" class="toggle wow rotateIn" data-wow-delay="1s"><i class="ion-navicon"></i></a></section>
-            </section>
-        </section>
-    </header> -->
 
     <!-- ****************************** Banner ************************** -->
 
@@ -69,81 +46,75 @@
                 <div class="col-md-6">
                     <div class="headings">
                         <h1 class="wow animated fadeInDown">Cards Against Humanity</h1>
+                        <br>
                         <p class="wow animated fadeInLeft">Cards Against Humanity is a party game for horrible people. Unlike most of the party games you've played before, Cards Against Humanity is as despicable and awkward as you and your friends.
 
-                            <br>The game is simple. Each round, one player asks a question from a black card, and everyone else answers with their funniest white card.
+                            <br>The game is simple. Each round, one player asks a question from a black card, and everyone else answers with their funniest white card. Trigger the modal with a button
+
+                            <br>
+                            <br>
 
 
-                            <div class="col-xs-6 col-sm-6 col-md-3">
-
-
-                                <!-- Trigger the modal with a button -->
-                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button>
-                            </div>
                             <!-- Trigger the modal with a button -->
-                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Create Account</button>
-                    </div>
+                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button>
 
-                    <!-- ****************************** Login Modal ************************** -->
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog">
+                                    <!-- ****************************** Login Modal ************************** -->
 
-                    <div class="modal fade" id="myModal" role="dialog">
-                        <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4>LOGIN</h4>
+                                            <hr>
+                                            <form role="form">
+                                                <div class="form-group">
 
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4>LOGIN</h4>
-                                    <hr>
-                                    <form role="form">
-                                        <div class="form-group">
-                                            <label for="name-input">Name:</label>
-                                            <input class="form-control" id="name-input" type="text">
+                                                    <input id="txtEmail" type="email" placeholder="Email">
+                                                    <input id="txtPassword" type="password" placeholder="Password">
+                                                </div>
+                                                <button id="btnLogin" class="btn btn-action">Login</button>
+                                                <button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
+
+                                            </form>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="email-input">Email:</label>
-                                            <input class="form-control" id="email-input" type="email">
-                                        </div>
-
-                                        <button class="btn btn-default" id="add-user" type="submit">Submit</button>
-                                    </form>
+                                    </div>
                                 </div>
-
                             </div>
-                        </div>
-
                     </div>
-                    <!-- ****************************** Create User Modal ************************** -->
-
-
+                </div>
             </section>
         </section>
     </section>
 
 
 
+</body>
 
-    <!-- ****************************** Footer ************************** -->
+</html>
 
-    <section id="footer">
-        <section class="container">
+<!-- ****************************** Footer ************************** -->
 
-            <!---copywright and link-->
-            <div class="footer-copyright py-3 text-center">
-                @ 2018 Copyright:
-                <a href="about.html">TopSKyThrillers.com</a>
-            </div>
+<section id="footer">
+    <section class="container">
+        <div class="footer-copyright py-3 text-center">
+            @ 2018 Copyright:
+            <a href="about.html">TopSKyThrillers.com</a>
+        </div>
 
-        </section>
     </section>
+</section>
 
 
-    <!-- All the scripts -->
+<!-- All the scripts -->
+<script src="app.js"></script>
 
-    <script src="assets/js/jquery-2.1.3.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/owl.carousel.js"></script>
-    <script src="assets/js/script.js"></script>
+
+<script src="assets/js/jquery-2.1.3.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/owl.carousel.js"></script>
+<script src="assets/js/script.js"></script>
 
 </body>
 
