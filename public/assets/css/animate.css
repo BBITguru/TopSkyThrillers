@@ -8,7 +8,6 @@ Copyright (c) 2014 Daniel Eden
 */
 
 .animated {
-
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
@@ -2971,3 +2970,4 @@ Copyright (c) 2014 Daniel Eden
 .zoomOutUp {
     -webkit-animation-name: zoomOutUp;
     animation-name: zoomOutUp;
+}
